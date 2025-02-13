@@ -4,7 +4,24 @@
 <title>
 Gallery
 </title>
+<link rel="stylesheet" href="CSS/styles.css">
 <meta charset = "utf-8">
+
+<style>
+	.firstborder {
+		border-style:double;
+		border-width: 15px;
+		border-radius: 150px;
+		border-color: blue;
+	}
+
+	.secondborder {
+		border-style: inset;
+		border-width: 10px;
+		border-color: green;
+	}
+
+</style>
 </head>
 
 <body>
@@ -29,11 +46,13 @@ Gallery
 			Image Gallery
 		</h2>
 
-		<img src="Images/Gallery/lemons.jpg" height="400" width="600" alt="Lemons on a branch">	
-		<img src="Images/Gallery/lemon_watersplash.jpg" height="400" width="600" alt="Lemon dropping into a cup of water">
-		<img src="Images/Gallery/lemon-squeezer.jpg" height="350" width="480" alt="Lemon dropping into a cup of water">
-		<img src="Images/Gallery/lime_cocktail.jpg" height="388" width="640" alt="Lime and Strawbarry Cocktails">
-		<img src="Images/Gallery/limes.jpg" height="400" width="600" alt="Limes on a branch">
+		<img class="firstborder" src="Images/Gallery/lemons.jpg" height="400" width="600" alt="Lemons on a branch">	
+		<img class="firstborder" src="Images/Gallery/lemon_watersplash.jpg" height="400" width="600" alt="Lemon dropping into a cup of water">
+		<img class="firstborder" src="Images/Gallery/lemon-squeezer.jpg" height="350" width="480" alt="Lemon dropping into a cup of water">
+		<br>
+		<br>
+		<img class="secondborder" src="Images/Gallery/lime_cocktail.jpg" height="388" width="640" alt="Lime and Strawbarry Cocktails">
+		<img class="secondborder" src="Images/Gallery/limes.jpg" height="400" width="600" alt="Limes on a branch">
 
 	</main>
 
