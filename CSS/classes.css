@@ -12,8 +12,8 @@
 	float: left;
 	margin-left: -20px;
 	width: 130px;
-	a:link {color: green; border-color: black}
-	a:visited {border-color: green}
+	a:link {color: green; border-color: white}
+	a:visited {border-color: green; color: white;}
 	a:hover {background-color: green; color: yellow; border-color: yellow}
 	
 	a{
