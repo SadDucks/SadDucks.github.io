@@ -7,33 +7,14 @@ body{
 	font-family:verdana;
 }
 
-nav{
-	float: left;
-	margin-left: -20px;
-	width: 120px;
-
-}
-
 ul{
 	list-style-image:url('tiny.png');
-}
-
-li{
-	border-style:inset;
-	margin-bottom:5px;
-	width: 90px;
-	text-align: center;
 }
 
 main{
 	margin-left:125px;
 	padding-left: 5px;
 	background-color:white;
-}
-
-h1{
-	margin-bottom:0px;
-	padding:0px;	
 }
 
 h2{
