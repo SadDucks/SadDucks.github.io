@@ -32,14 +32,14 @@
 	a:hover {background-color: green; color: yellow; border-color: yellow}
 	
 	a{
-	border-style:inset;
-	padding: 2px 8px 2px 8px;
+		border-style:inset;
+		padding: 2px 8px 2px 8px;
 	}
 
 	li{
-	margin-bottom: 15px;
-	width: 90px;
-	text-align: center;
+		margin-bottom: 15px;
+		width: 90px;
+		text-align: center;
 	}
 
 	ul{
