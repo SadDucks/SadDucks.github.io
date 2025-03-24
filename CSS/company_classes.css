@@ -13,7 +13,7 @@
 	color: #FAFA33; 
 	float: left;
  	height: 8%;
-	object-fit: scale-down;
+	margin-bottom: 5px;
 	clear: both;
 	background-color: white;
 }
