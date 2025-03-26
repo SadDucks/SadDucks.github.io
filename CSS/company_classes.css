@@ -26,7 +26,7 @@
 	float: left;
 	clear: both;
 	margin-left: -20px;
-	width: 135px;
+	width: 130px;
 	a:link {color: green; border-color: white}
 	a:visited {border-color: green; color: white;}
 	a:hover {background-color: green; color: yellow; border-color: yellow}
@@ -38,8 +38,8 @@
 
 	li{
 		margin-bottom: 15px;
-		width: 90px;
-		text-align: center;
+		width: 160px;
+		text-align: left;
 	}
 
 	ul{
