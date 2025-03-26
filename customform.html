@@ -38,18 +38,39 @@ Contact Us
 
 	<main>
 		<form action="mailto:whatatimetobealemon@gmail.com" method="post" name="inquryRequest">
-            First Name: <input type="text" name="firstName"> <br>
-            Last Name: <input type="text" name="lastName"> <br>
-            Email: <input type="text" name="email"> <br>
-            Phone Number: <input type="text" name="phone"> <br>
+            First Name: <input type="text" name="firstName" required> <br>
+            Last Name: <input type="text" name="lastName" required> <br>
+            Email: <input type="email" name="email" required> <br>
+			Phone Number: <input type="text" name="phone" required> <br>
+
+			<!-- address -->
+			Country: 
+			Address Line 1: <input type="text" name="addressLine1" required>
+			Address Line 2: <input type="text" name="addressLine2" required>
+			City: <input type="text" name="city" required>
+			State/Province: <input type="text" name="stateProvince" required>
+			
+			<br>
+          
             Inqury Type:
-                <input type="radio" name="gender" value="m"> Male
-                <input type="radio" name="gender" value="f"> Female <br>
-            Favorite Food:
-                <input type="checkbox" name="food" value="P"> Pizza
-                <input type="checkbox" name="food" value="T"> Tacos <br>
+                <input type="radio" name="inqury" value="m"> Male
+                <input type="radio" name="inqury" value="f"> Female <br>
 
+            Prefer method(s) of Contact:
+                <input type="checkbox" name="contact" value="P"> Phone
+                <input type="checkbox" name="contact" value="E"> Email
+				<input type="checkbox" name="contact" value="M"> Mail
+			<br>
 
+			change this to Countries
+			<Select>
+				<option value="1">General Inquiry</option>
+				<option value="2">Product Inquiry</option>
+				<option value="3">Service Inquiry</option>
+				<option value="4">Other</option>
+			</Select>
+
+			<br>
             <input type="submit" value="Submit">
             <input type="reset" value="Reset">
         </form>
