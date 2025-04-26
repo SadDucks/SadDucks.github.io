@@ -19,7 +19,7 @@ Jimmy&#39;s Lemons
 		daysUntil = daysSubtracted / (1000 * 60 * 60 * 24);
 
 		if (daysUntil > 0) {
-			test.document.write("There are " + Math.ceil(daysUntil) + " days until National Lemon Day!");
+			document.write("There are " + Math.ceil(daysUntil) + " days until National Lemon Day!");
 		}
 		else if (daysUntil < 0) {
 			document.write("Whoops! National Lemon Day was " + Math.ceil(Math.abs(daysUntil)) + " days ago!");
@@ -39,18 +39,17 @@ Jimmy&#39;s Lemons
 		quotes[3] = "Sqeeze the day! Carpe Diem!"
 	}
 
-	nationalLemonDay();
 	var daysOfWeek = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
 
 
 	var firstName = prompt("Please enter your first name:");
 	window.alert("Welcome, " + firstName + ", to Jimmy's Lemons' Offical Website!");
+
 </script>
 
 </head>
 
 <body>
-	<h2 name="test"> </h2>
 	<div class="titleDiv">
 	<header>
 		<a href="/"> 
@@ -82,6 +81,8 @@ Jimmy&#39;s Lemons
 	</nav>
 
 	<main>
+		<h2> <script>nationalLemonDay();</script> </h2>
+
 		<h2 style="color: black; color: rgba(0,128,0,.75); opacity:.85 ;font-size:40pt; font-family:verdana; background-image:url(Images/Home/lemonDrop.jpg); background-repeat: no-repeat; background-size: 100%; text-align:center; border-radius: 30px; margin: auto; padding-top: 30px; padding-bottom: 30px;">
 			Who are we?
 		</h2>
