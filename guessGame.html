@@ -1,0 +1,111 @@
+<!DOCTYPE html lang = "en">
+
+<head>
+<title>
+Guessing Game
+</title>
+<link rel="stylesheet" href="CSS/styles.css">
+<link rel="stylesheet" href="CSS/company_classes.css">
+<link rel="icon" href="icon.ico" type="image/x-icon">
+<meta charset = "utf-8">
+
+<style>
+	.firstborder {
+		border-style:double;
+		border-width: 15px;
+		border-radius: 150px;
+		border-color: blue;
+	}
+
+	.secondborder {
+		border-style: inset;
+		border-width: 10px;
+		border-color: green;
+	}
+
+</style>
+
+<script>
+    var newAttempt = true;
+    randomAnswer = 0;
+
+    function gameAnswer() {
+        randomAnswer = Math.floor(Math.random() * 101);
+
+        while (randomAnswer == 0 || randomAnswer == 101) {
+            randomAnswer = Math.floor(Math.random() * 101);
+        }
+    }
+
+    function checkGuess() {
+        var guess = document.guessGame.userGuess.value;
+        if (newAttempt == true) {
+            gameAnswer();
+            newAttempt = false;
+        }
+
+        if (guess == randomAnswer) {
+            window.alert("Congrats! You guess the number!");
+            newAttempt = true;
+        }
+        else if (guess > randomAnswer) {
+            window.alert("Whoops! Your guess was too high!")
+            document.guessGame.userGuess.value = "";
+            document.guessGame.userGuess.focus();
+        }
+        else {
+            window.alert("Whoops! Your guess was too low!")
+            document.guessGame.userGuess.value = "";
+            document.guessGame.userGuess.focus();
+        }
+    }
+</script>
+
+</head>
+
+<body>
+	<div style="background-color: black; margin-left: -8px">
+	<header>
+		<a href="/"> 
+			<img class="titleImage" src="Logos/logo-transparent.png" alt="Company Logo"> 
+		</a>
+		<h1 class="title">
+			Jimmy's Guessing Game
+		</h1>
+	</header>
+
+	<nav class="nav">
+		<ul>
+			<li>
+			<a href="index.html">Home</a>
+			</li>
+			<li>
+			<a href="gallery.html">Gallery</a>
+			</li>
+			<li>
+			<a href="resources.html">Resources</a>
+			</li>
+			<li>
+			<a href="Staff_Directory/staffdirectory.html">Staff Directory</a>
+			</li>
+			<li>
+			<a href="customform.html">Contact Us</a>
+			</li>
+		</ul>
+	</nav>
+
+	<main>
+        <form method="post" name="guessGame">
+            Guess a Number between 1 and 100 <br>
+            <input type="text" name="userGuess"> <input type="button" value="Guess" onclick="checkGuess()">
+            
+        </form>
+	</main>
+	</div>
+
+	<footer>
+		<h6 style="color: black;font-size:6pt; font-family:verdana;"><i><b>&copy; Jimmy's Lemons 2022-2025</b></i> &nbsp;Contact Us: <a href="mailto:whatatimetobealemon@gmail.com">whatatimetobealemon@gmail.com</a></h6>
+	</footer>
+
+</body>
+</html>

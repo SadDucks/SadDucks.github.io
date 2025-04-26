@@ -10,9 +10,47 @@ Jimmy&#39;s Lemons
 
 <meta charset = "utf-8">
 
+<script>
+	function nationalLemonDay() {
+		var lemonDay = new Date("July 23, " + new Date().getFullYear());
+		var today = new Date()
+
+		daysSubtracted = lemonDay - today;
+		daysUntil = daysSubtracted / (1000 * 60 * 60 * 24);
+
+		if (daysUntil > 0) {
+			test.document.write("There are " + Math.ceil(daysUntil) + " days until National Lemon Day!");
+		}
+		else if (daysUntil < 0) {
+			document.write("Whoops! National Lemon Day was " + Math.ceil(Math.abs(daysUntil)) + " days ago!");
+			lemonDay = new Date("July 23, " + (new Date().getFullYear() + 1));
+			document.write("The next National Lemon Day is on " + lemonDay)
+		}
+		else {
+			
+		}
+	}
+
+	function quotesF() {
+		quotes = new Array(4)
+		quotes[0] = "When life gives you lemons, make lemonade!";
+		quotes[1] = "Lemons are the sunshine of the kitchen.";
+		quotes[2] = "A lemon a day keeps the doctor away!";
+		quotes[3] = "Sqeeze the day! Carpe Diem!"
+	}
+
+	nationalLemonDay();
+	var daysOfWeek = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
+
+
+	var firstName = prompt("Please enter your first name:");
+	window.alert("Welcome, " + firstName + ", to Jimmy's Lemons' Offical Website!");
+</script>
+
 </head>
 
 <body>
+	<h2 name="test"> </h2>
 	<div class="titleDiv">
 	<header>
 		<a href="/"> 
@@ -105,7 +143,13 @@ Jimmy&#39;s Lemons
 	</main>
 </div>
 	<footer>
-		<h6 style="color: black;font-size:6pt; font-family:verdana;"><i><b>&copy; Jimmy's Lemons 2022-2025</b></i> &nbsp;Contact Us: <a href="mailto:whatatimetobealemon@gmail.com">whatatimetobealemon@gmail.com</a></h6>
+		<h6 style="color: black;font-size:6pt; font-family:verdana; margin-bottom: 3px;"><i><b>&copy; Jimmy's Lemons 2022-2025</b></i> &nbsp;Contact Us: <a href="mailto:whatatimetobealemon@gmail.com">whatatimetobealemon@gmail.com</a></h6>
+		<h6 style="color: black;font-size:6pt; font-family:verdana; font-weight:bold; margin-top:0px;">
+
+		<script>
+			window.document.write("This page was last updated on " + window.document.lastModified);
+		</script>
+		</h6>
 	</footer>
 
 </body>
