@@ -12,7 +12,7 @@ Jimmy&#39;s Lemons
 
 <script>
 	function nationalLemonDay() {
-		var lemonDay = new Date("July 23, " + new Date().getFullYear());
+		var lemonDay = new Date("July 23, " + new Date().getFullYear())
 		var today = new Date()
 
 		daysSubtracted = lemonDay - today;
@@ -24,7 +24,7 @@ Jimmy&#39;s Lemons
 		else if (daysUntil < 0) {
 			document.write("Whoops! National Lemon Day was " + Math.ceil(Math.abs(daysUntil)) + " days ago!");
 			lemonDay = new Date("July 23, " + (new Date().getFullYear() + 1));
-			document.write("The next National Lemon Day is on " + lemonDay)
+			document.write("The next National Lemon Day is on " + lemonDay);
 		}
 		else {
 			
