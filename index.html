@@ -11,13 +11,13 @@ Jimmy&#39;s Lemons
 <meta charset = "utf-8">
 
 <script>
-	function nationalLemonDay() {
-		var lemonDay = new Date("July 23, " + new Date().getFullYear())
+	var lemonDay = new Date("July 23, " + new Date().getFullYear())
 		var today = new Date()
 
 		daysSubtracted = lemonDay - today;
 		daysUntil = daysSubtracted / (1000 * 60 * 60 * 24);
 
+	function lemonDayTitle() {
 		if (daysUntil > 0) {
 			document.write("There are " + Math.ceil(daysUntil) + " days until National Lemon Day!");
 		}
@@ -27,10 +27,23 @@ Jimmy&#39;s Lemons
 			document.write("The next National Lemon Day is on " + lemonDay);
 		}
 		else {
-			
+			document.write("Happy National Lemon Day! Celebrate with us by enjoying some of our delicious lemon products!");
 		}
 	}
 
+	function lemonDayDesc() {
+		if (daysUntil > 0) {
+			document.write("National Lemon Day is a day to celebrate the lemon, a fruit that is both delicious and versatile. It is celebrated on July 23rd each year. On this day, we encourage everyone to enjoy lemons in all their forms, from lemonade to lemon meringue pie! It's not quite time for National Lemon Day, so enjoy a random quote instead!");
+			document.write("<br>");
+			quotePicker()
+		}
+		else if (daysUntil < 0) {
+			document.write("National Lemon Day was created to celebrate the lemon, a fruit that is both delicious and versatile. It is celebrated on July 23rd each year. We encourage everyone to enjoy lemons in all their forms, from lemonade to lemon meringue pie! Unfortunately, National Lemon Day has past, we hope to see you next year.");
+		}
+		else {
+			document.write("Happy National Lemon Day! Celebrate with us by enjoying some of our delicious lemon products!");
+		}
+	}
 	function quotesF() {
 		quotes = new Array(4)
 		quotes[0] = "When life gives you lemons, make lemonade!";
@@ -39,8 +52,12 @@ Jimmy&#39;s Lemons
 		quotes[3] = "Sqeeze the day! Carpe Diem!"
 	}
 
-	var daysOfWeek = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
-
+	function quotePicker() {
+		quotesF();
+		var randomIndex = Math.floor(Math.random() * quotes.length);
+		var randomIndex = Math.floor(Math.random() * 4);
+		document.write("Random quote! " + quotes[randomIndex]);
+	}
 
 	var firstName = prompt("Please enter your first name:");
 	window.alert("Welcome, " + firstName + ", to Jimmy's Lemons' Offical Website!");
@@ -81,7 +98,15 @@ Jimmy&#39;s Lemons
 	</nav>
 
 	<main>
-		<h2> <script>nationalLemonDay();</script> </h2>
+		<h2 style="color: white; font-size:24pt; font-family:verdana; background-image:url(Images/Home/nationalLemonDay.webp); background-repeat: no-repeat; background-size: 100%; text-align:center; border-radius: 30px; margin: auto; margin-top: 0px; padding-top: 30px; padding-bottom: 30px;"> 
+			<script>lemonDayTitle();</script> 
+		</h2>
+
+		<p>
+			<script>lemonDayDesc();</script>
+		</p>
+
+		<br>
 
 		<h2 style="color: black; color: rgba(0,128,0,.75); opacity:.85 ;font-size:40pt; font-family:verdana; background-image:url(Images/Home/lemonDrop.jpg); background-repeat: no-repeat; background-size: 100%; text-align:center; border-radius: 30px; margin: auto; padding-top: 30px; padding-bottom: 30px;">
 			Who are we?
