@@ -61,6 +61,30 @@ Jimmy&#39;s Lemons
 		var randomIndex = Math.floor(Math.random() * 4);
 		document.write("Random quote! " + quotes[randomIndex]);
 	}
+	//slideshow function
+	var time = 2500;
+	var i = 0;
+	var images = [];
+	images[0] = "Images/Gallery/lemon_watersplash.jpg";
+	images[1] = "Images/Gallery/lemons.jpg";
+	images[2] = "Images/Gallery/lemon-squeezer.jpg";
+	images[3] = "Images/Gallery/lime_cocktail.jpg";
+	images[4] = "Images/Gallery/limes.jpg";
+
+	function slideshow() {
+		document.slideshow.src = images[i];
+
+		if(i < images.length - 1) {
+			i++;
+		} else {
+			i = 0;
+		}
+
+		setTimeout("slideshow()", time);
+	}
+
+	window.onload = slideshow;
+	
 
 	var firstName = prompt("Please enter your first name:");
 	window.alert("Welcome, " + firstName + ", to Jimmy's Lemons' Offical Website!");
@@ -102,6 +126,7 @@ Jimmy&#39;s Lemons
 
 	<main>
 		<h2 style="color: white; font-size:24pt; font-family:verdana; background-image:url(Images/Home/nationalLemonDay.webp); background-repeat: no-repeat; background-size: 100%; text-align:center; border-radius: 30px; margin: auto; margin-top: 0px; padding-top: 30px; padding-bottom: 30px;"> 
+			<script>lemonDayTitle();</script>
 		</h2>
 
 		<p>
@@ -119,7 +144,9 @@ Jimmy&#39;s Lemons
 			<p>Here at <strong>Jimmy&#39;s Lemons</strong>, we take pride in our high-quality Lemon products and services. <em><b>Our mission</b></em>  is to provide the world with affordable citrus and bring joy to our consumers. Our job is only a success when everyone in the galaxy has access to citrus.</p>
 
 			<p>All of our lemons are <i>locally grown</i> in the United States and shipped via American Companies. Our services include: Lemon Products for sale, Influencer Partnership Program, Corporation Exclusive Partnership Program and more. We strive to provide our services with excellent customer service.</p>
-
+			
+			<img name="slideshow" width: "560" height="315" alt="Slideshow of lemons and lime products.">
+			
 		<video controls loop width="560" height=315>
 			<source src="Videos/why_us.mp4" type="video/mp4">
 		</video>
